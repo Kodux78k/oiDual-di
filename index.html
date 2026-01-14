@@ -392,7 +392,7 @@
       </div>
       
       <!-- Trigger visible only on Orb Hover -->
-      <div class="orb-menu-trigger" id="orbMenuTrigger" title="Menu Rápido">●●●</div>
+      <div class="orb-menu-trigger" id="orbMenuTrigger" title="Menu Rápido">●</div>
       <!-- Drag Handle for HUD -->
       <div class="drag-handle"></div>
 
@@ -478,14 +478,7 @@
             </div>
         </div>
 
-        <div class="stagger-item" style="margin-top:4px">
-            <div class="stat-lbl" style="margin-bottom:6px">INTERFACE MODE</div>
-            <div style="display:flex; gap:8px;">
-                <button class="trigger-btn mode-btn active-mode" id="btnModeCard" onclick="setMode('card')" style="flex:1" title="Modo Padrão">CARD</button>
-                <button class="trigger-btn mode-btn" id="btnModeOrb" onclick="setMode('orb')" style="flex:1" title="Flutuante">ORB</button>
-                <button class="trigger-btn mode-btn" id="btnModeHud" onclick="setMode('hud')" style="flex:1" title="Barra de Topo">HUD</button>
-            </div>
-        </div>
+       
 
         <div class="stagger-item">
           <div class="stats-grid">
@@ -1137,12 +1130,7 @@
         if(!isInitialLoad) saveUIState();
     };
 
-    function updateModeButtons(mode) {
-        [els.btnModeCard, els.btnModeOrb, els.btnModeHud].forEach(b=>b.classList.remove('active-mode'));
-        if(mode==='card') els.btnModeCard.classList.add('active-mode');
-        if(mode==='orb') els.btnModeOrb.classList.add('active-mode');
-        if(mode==='hud') els.btnModeHud.classList.add('active-mode');
-    }
+    
 
     function toggleCardState() {
       if(els.card.classList.contains('animating')) return;
